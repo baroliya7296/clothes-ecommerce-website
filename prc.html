@@ -1,0 +1,99 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Toggle Product</title>
+  <style>
+    #product {
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+    <button onclick="toggleProduct()">Show Product</button>
+
+  <div id="product">
+    <h2>Awesome Product</h2>
+    <p>This is a great product you'll love!</p>
+    <img src="https://via.placeholder.com/150" alt="Product Image">
+  </div>
+
+  <script>
+    function toggleProduct() {
+      const product = document.getElementById('product');
+      const button = document.querySelector('button');
+      
+      if (product.style.display === 'none' || product.style.display === '') {
+        product.style.display = 'block';
+        button.textContent = 'Hide Product';
+      } else {
+        product.style.display = 'none';
+        button.textContent = 'Show Product';
+      }
+    }
+  </script>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dropdown Product Reveal</title>
+  <style>
+    .container {
+      position: relative;
+      display: inline-block;
+    }
+
+    #product {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 300px;
+      background: #f9f9f9;
+      border: 1px solid #ccc;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+
+    #product.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <button onclick="toggleProduct()">Show Product</button>
+    <div id="product">
+      <h2>Awesome Product</h2>
+      <p>This is a great product you'll love!</p>
+      <img src="https://via.placeholder.com/150" alt="Product Image">
+    </div>
+  </div>
+
+  <script>
+    function toggleProduct() {
+      const product = document.getElementById('product');
+      const button = document.querySelector('button');
+
+      product.classList.toggle('show');
+      button.textContent = product.classList.contains('show') ? 'Hide Product' : 'Show Product';
+    }
+  </script>
+
+</body>
+</html>
+
