@@ -47,16 +47,18 @@ $(function () {
   startAutoSlide();
 });
 
+
 function toggleProduct() {
-  const product = document.getElementById('product');
-  const button = document.querySelector('button');
+  const product = document.getElementById('product-img');
+  const button = document.querySelector('toggleButton');
   
   if (product.style.display === 'none' || product.style.display === '') {
     product.style.display = 'grid';
-    button.textContent = 'Hide Product';
+    toggleButton.textContent = 'Hide Product...';
   } else {
     product.style.display = 'none';
-    button.textContent = 'Show Product';
+    toggleButton.textContent = 'Show Product...';
   }
 }
+
 

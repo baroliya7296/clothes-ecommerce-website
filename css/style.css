@@ -240,25 +240,94 @@ h3 i{
  .vectore h2{
   font-family: "Lilita One", sans-serif;
  }
- .trending-img img
+ .trending-img img ,#product-img img
  {
-   height: 380px;
-   width: 280px;
+   height: 250px;
+   width: 180px;
    border-radius: 12px;
+   transition: all 300ms;
+  }
+  .trending-img{
+    display: grid;
+    grid-template-columns: repeat(6,200px);
+    align-items: center;
+    gap: 15px;
  }
- .trending-img{
-    height: 380px;
-   width: 280px;
-   display: grid;
-   grid-template-columns: repeat(4,290px);
-   align-items: center;
-   gap: 30px;
+ 
+ /* ************** show-more option details ************* */
+ #product-img img{
+  border-radius: 0;
+  height: 290px;
+  width: 225px;
  }
- #product
- {
+ #product-img{
    display: grid;
-   grid-template-columns: repeat(4,290px);
-   align-items: center;
+   grid-template-columns: repeat(5,220px);
    gap: 30px;
+   justify-content: center;
    display: none;
+   margin-top: 40px;
+ }
+ .togglebutton{
+  padding: 5px 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid black;
+  margin-top: 20px;
+  background-color: transparent;
+  color: rgb(92, 92, 236);
+  font-size: 20px;
+ }
+ .trending-img img:hover {
+  scale: 1.03;
+ }
+ #product-img img:hover {
+  scale: 1.03;
+ }
+ .trending-img h4 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 500;
+ }
+.product-details {
+  width: 250px;
+  padding: 10px;
+}
+ /* ***********trends-details section********* */
+.trends-details{
+  display: flex;
+  justify-content: space-around;
+}
+ .trends-details img{
+  width: 190px;
+  height: 240px;
+ }
+ .trends-details p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 500;
+ }
+ .sweter {
+  width: 260px;
+  padding: 15px 30px;
+  text-align: center;
+}
+.sweter img{
+   transition: all 300ms;
+ }
+ .sweter img:hover{
+  scale: 1.03;
+ }
+ .winter-special{
+  width: 570px;
+ }
+ .winter-special h1{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  font-weight: 600;
+ }
+ .winter-sell{
+  display: grid;
+  grid-template-columns: repeat(2,260px);
+  gap: 15px;
  }
